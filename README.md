@@ -5,73 +5,86 @@
 [![Python](https://img.shields.io/badge/python-3.10+-blue)](https://www.python.org/)
 [![B2B Scraping](https://img.shields.io/badge/purpose-b2b--scraping-orange)](#)
 
-**Extract Alibaba supplier profiles with Gold Supplier status, verification level, response rate, and contact details.** Crucial for vendor vetting and B2B sourcing.
+**Find verified, trustworthy suppliers on Alibaba.com in minutes.** Extract factory information, Gold Supplier years, verification status, and response rates to identify reliable partners for your dropshipping or Amazon FBA business.
 
 ---
 
 ## What is Alibaba Supplier Scraper?
 
-**Alibaba Supplier Scraper** is a specialized tool for extracting **supplier and company profiles** from Alibaba.com. Retrieve comprehensive supplier data including Gold Supplier status, verification levels, business type, production capacity, response rates, trade history, and contact information. Essential for due diligence, supplier qualification, and B2B lead generation.
+**Alibaba Supplier Scraper** is a specialized tool for extracting **detailed supplier profiles** from Alibaba.com. Stop wasting hours on unreliable suppliers - this high-speed scraper finds verified manufacturers with Gold Supplier years, verification status, and real response rates perfect for dropshipping and Amazon FBA. Extract factory information, staff count, annual revenue, product portfolios, and ratings.
 
 ## Why Use Alibaba Supplier Scraper?
 
 ### Business Use Cases:
-- **Supplier Vetting** - Verify supplier credentials before placing orders
-- **Due Diligence** - Research supplier background and verification status
-- **Lead Generation** - Build databases of verified suppliers in your industry
-- **Competitor Analysis** - Monitor competitor supplier relationships
-- **Sourcing Decisions** - Compare suppliers across multiple criteria
-- **Risk Assessment** - Evaluate supplier reliability and trade history
+- **New Dropshippers** - Verifying suppliers before placing first orders
+- **Amazon FBA Sellers** - Needing suppliers with proper verification for brand protection
+- **Product Researchers** - Validating factory capabilities before ordering samples
+- **Profit Hunters** - Finding suppliers with OEM services for custom branding
+- **E-commerce Entrepreneurs** - Avoiding scams with verified supplier data
 
-## How to Scrape Alibaba Suppliers
+This scraper extracts the EXACT verification data you need:
+
+| Your Need | What We Extract | Why It Matters |
+|-----------|----------------|----------------|
+| **Trust Verification** | `is_assessed_supplier`, `is_verified_supplier_pro` | Avoid scams with Alibaba's verification system |
+| **Quality Assurance** | Gold Supplier years, review scores | Find suppliers with proven track records |
+| **Fast Communication** | `response_rate` (≤3h) | Identify responsive suppliers |
+| **Factory Reliability** | `factory_size`, `total_employees` | Verify actual manufacturing capacity |
+| **Service Capabilities** | OEM/ODM service tags | Find suppliers who offer private labeling |
+| **Product Match** | `products_offered` data | Confirm suppliers actually make what they claim |
+
+## How to Find Verified Suppliers
 
 1. **Open the [Alibaba Supplier Scraper on Apify](https://apify.com/devcake/alibaba-supplier-scraper)**
-2. **Enter supplier URLs** or search for suppliers by keyword
-3. **Configure options** (include products, contact details)
-4. **Click "Start"** and wait for extraction
-5. **Download data** with verification and contact info
+2. **Enter search queries** (e.g., "wireless earbuds", "phone cases")
+3. **Set max pages** (1-50, 20 suppliers per page)
+4. **Click "Start"** and download supplier data
 
-**Pro Tip**: Use Alibaba Products Scraper first to find products, then extract supplier URLs from those results to get detailed supplier profiles.
+**Pro Tip**: Look for Gold Supplier years ≥5 and response rates ≤3h for reliable suppliers.
 
 ## Features
 
-✅ **Gold Supplier Status** - Check years as Gold Supplier and membership level
+### Supplier Verification Data
+- **Gold Supplier Years** - Years as Gold Supplier (critical metric)
+- **Verified Status** - Assessed Supplier & Verified Pro flags
+- **Response Rate** - Typical response time (≤3h = good)
+- **Review Count** - Number of buyer reviews
+- **Review Score** - Average review rating (1-5)
 
-✅ **Verification Level** - Extract verified business information and credentials
-
-✅ **Response Rate** - Get supplier response times and rates
-
-✅ **Business Type** - Identify manufacturer, trader, or hybrid
-
-✅ **Production Capacity** - Extract factory capabilities and output
-
-✅ **Trade History** - Get transaction history and export data
-
-✅ **Contact Details** - Extract emails, phone numbers, and addresses
-
-✅ **Product Count** - See total products listed by supplier
+### Factory Intelligence
+- **Total Employees** - Staff count (indicates capacity)
+- **Factory Size** - Production space (m²)
+- **Annual Revenue** - Estimated revenue volume
+- **Products Offered** - Actual products manufactured
+- **Service Tags** - OEM, ODM, customization capabilities
 
 ## Pricing
 
-| Plan | Price | Results |
-|------|-------|---------|
-| Pay-per-event | **$0.005** | 1 supplier profile |
-| Bulk | Custom | Thousands of suppliers |
+**Pay-per-event pricing** for maximum cost efficiency:
 
-**Try it free** with Apify's trial credits!
+| Event | Price |
+|-------|-------|
+| **Actor Start** | $0.01 |
+| **Per Supplier** | $0.005 |
 
-## Input Example
+### Cost Examples
+- Extract 100 suppliers: $0.51
+- Extract 500 suppliers: $2.51
+- Extract 1,000 suppliers: $5.01
+
+## Input
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `queries` | array | ✅ Yes | Search queries to scrape suppliers for |
+| `max_pages` | integer | No | Max pages per query (default: 1, 20 suppliers/page) |
+
+### Input Example
 
 ```json
 {
-  "supplierUrls": [
-    "https://www.alibaba.com/profile/abc-electronics-co.html"
-  ],
-  "includeProducts": true,
-  "includeContactInfo": true,
-  "proxy": {
-    "useApifyProxy": true
-  }
+  "queries": ["phone cases manufacturer"],
+  "max_pages": 10
 }
 ```
 
@@ -79,36 +92,39 @@
 
 ```json
 {
-  "supplierId": "220123456789",
-  "companyName": "Shenzhen ABC Electronics Co., Ltd.",
-  "supplierUrl": "https://www.alibaba.com/profile/abc-electronics-co.html",
-  "isGoldSupplier": true,
-  "goldSupplierYears": 8,
-  "isVerified": true,
-  "verificationLevel": "Business License Verified",
-  "businessType": "Manufacturer",
-  "responseRate": "97%",
-  "responseTime": "Within 24 hours",
-  "productionCapacity": "100,000 Pieces per Month",
-  "totalProducts": 342,
-  "tradeAssurance": true,
-  "mainMarkets": ["North America", "Western Europe", "Domestic Market"],
-  "contact": {
-    "address": "Floor 3, Building 5, Shenzhen, Guangdong, China",
-    "phone": "+86-755-12345678",
-    "email": "sales@abcelectronics.com"
-  },
-  "website": "https://www.abcelectronics.com"
+  "search_query": "phone case manufacturer",
+  "company_id": 50056289,
+  "name": "Guangzhou Sinatech Technology Co., Ltd.",
+  "country": "China",
+  "country_code": "CN",
+  "years_as_gold_supplier": 23,
+  "company_icon": "https://s.alicdn.com/@sc04/...",
+  "profile_url": "https://sinatech.en.alibaba.com/company_profile.html",
+  "total_employees": "60+ staff",
+  "factory_size": "1,800+ m²",
+  "annual_revenue": "US $20,000+",
+  "response_rate": "≤3h",
+  "is_assessed_supplier": true,
+  "is_verified_supplier_pro": false,
+  "products_offered": "Leather Phone Case, Leather Phone Bag, Leather Tablets Case",
+  "review_count": 6,
+  "review_score": 4.5,
+  "service_tags": [
+    "Customized packaging",
+    "Graphic customization",
+    "Online support",
+    "OEM Service"
+  ]
 }
 ```
 
 ## Related Actors
 
-| Actor | Description |
-|-------|-------------|
-| [Alibaba Products Scraper](https://github.com/Bahm9919/alibaba-products-scraper) | Scrape product listings with MOQ |
-| [GlobalSources Supplier Scraper](https://github.com/Bahm9919/globalsources-supplier-scraper) | Extract 6-level verified suppliers |
-| [GlobalSources Products Scraper](https://github.com/Bahm9919/globalsources-products-scraper) | Scrape product listings with specs |
+| Actor | Description | Pricing |
+|-------|-------------|---------|
+| [Alibaba Products Scraper](https://github.com/devcake/alibaba-products-scraper) | Find profitable products with low MOQ | $0.005/supplier |
+| [GlobalSources Products Scraper](https://github.com/devcake/globalsources-products-scraper) | Source from 10M+ verified suppliers | $0.005/supplier |
+| [GlobalSources Supplier Scraper](https://github.com/devcake/globalsources-supplier-scraper) | 6-level verification data | $0.005/supplier |
 
 ## FAQ
 
@@ -122,16 +138,16 @@ Look for suppliers with: (1) Business license verification, (2) 3+ years as Gold
 Yes, when available, the scraper extracts emails, phone numbers, addresses, and company websites from supplier profiles.
 
 ### What's the difference between manufacturers and traders?
-Manufacturers produce products directly and typically offer lower prices. Traders are middlemen who source from manufacturers. Both have advantages depending on your needs.
+Manufacturers produce products directly and typically offer lower prices. Traders are middlemen who source from manufacturers.
 
 ### How do I find suppliers in my industry?
-Search for products in your industry using Alibaba Products Scraper, then extract supplier URLs to get detailed profiles using this scraper.
+Search for products in your industry using search queries like "wireless earbuds manufacturer" or "phone case supplier".
 
 ## Get it on Apify
 
 [![Run on Apify](https://img.shields.io/badge/Run_on-Apify-informational?style=for-the-badge&logo=apify)](https://apify.com/devcake/alibaba-supplier-scraper)
 
-**Start extracting Alibaba supplier profiles in minutes!**
+**Start finding verified suppliers in minutes!**
 
 ---
 
@@ -139,12 +155,17 @@ Search for products in your industry using Alibaba Products Scraper, then extrac
 
 Check out my other scraping tools:
 
-- [Pinterest Search Scraper](https://github.com/Bahm9919/pinterest-search-scraper)
-- [Pinterest Profile Scraper](https://github.com/Bahm9919/pinterest-profile-scraper)
-- [AlternativeTo Data Scraper](https://github.com/Bahm9919/alternativeto-data-scraper)
+### Pinterest Suite
+- [Pinterest Search Scraper](https://github.com/devcake/pinterest-search-scraper) - Search Pinterest by keywords
+- [Pinterest Board Scraper](https://github.com/devcake/pinterest-board-scraper) - Download complete boards
+- [Pinterest Profile Scraper](https://github.com/devcake/pinterest-profile-scraper) - Extract user profiles with emails
+- [Pinterest Pin Scraper](https://github.com/devcake/pinterest-pin-scraper) - Scrape pins with product data
+
+### Other Tools
+- [AlternativeTo Data Scraper](https://github.com/devcake/alternativeto-data-scraper) - Extract software alternatives with license filters
 
 ---
 
 **License**: MIT | **Author**: [@devcake](https://apify.com/u/devcake)
 
-[![GitHub stars](https://img.shields.io/github/stars/Bahm9919/alibaba-supplier-scraper?style=social)](https://github.com/Bahm9919/alibaba-supplier-scraper)
+[![GitHub stars](https://img.shields.io/github/stars/devcake/alibaba-supplier-scraper?style=social)](https://github.com/devcake/alibaba-supplier-scraper)
